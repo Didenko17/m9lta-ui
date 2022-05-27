@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	import Counter from '$lib/Counter.svelte';
+	
 </script>
 
 <svelte:head>
@@ -11,17 +11,9 @@
 </svelte:head>
 
 <section>
-	<h1>
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
+		
 </section>
 
 <style>
-
+	
 </style>
