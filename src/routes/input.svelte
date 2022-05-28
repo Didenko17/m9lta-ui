@@ -1,11 +1,11 @@
 <script lang="ts">
     import Checkbox from "$lib/Checkbox.svelte";
-import DatePicker from "$lib/DatePicker.svelte";
+    import DatePicker from "$lib/DatePicker.svelte";
     import Input from "$lib/Input.svelte"
     import RadioInput from "$lib/RadioInput.svelte";
     import Select from "$lib/Select.svelte";
-import Toggle from "$lib/Toggle.svelte";
-import { bind } from "svelte/internal";
+    import Toggle from "$lib/Toggle.svelte";
+    import Upload from "$lib/Upload.svelte";
 
     let textInputValue = "";
     let numberInputValue = 17;
@@ -15,7 +15,6 @@ import { bind } from "svelte/internal";
     let checkboxGroup = [];
     let toggle = true;
     let date;
-    let rangeDate
 
     const onChange = (e) => {
         console.log(e.detail.target)
@@ -77,9 +76,16 @@ import { bind } from "svelte/internal";
     <Checkbox on:change={onChange} bind:group={checkboxGroup} name="cart" value="milk" label="milk" />
     <Checkbox on:change={onChange} bind:group={checkboxGroup} name="cart" value="water" label="water" />
     <Checkbox on:change={onChange} name="cart" value="banana" label="banana" />
-    <h3>Toggle</h3>
+    <h2>Toggle</h2>
     <Toggle bind:value={toggle} />
-    <h3>Date picker</h3>
+    <h2>Date picker</h2>
     <DatePicker label="Date EU" bind:value={date} />
     <DatePicker label="Date US" bind:value={date} format='MM-DD-YYYY' />
+    <h2>Upload</h2>
+    <h3>Upload default usage</h3>
+    <Upload type='drag-and-drop' on:change={(e) => console.log('file change', e.detail)}/>
+    <h3>Upload accept</h3>
+    <Upload type='both' multiple  accept='.docx, .png' on:change={(e) => console.log('file change', e.detail)} />
+    <h3>Upload multiple</h3>
+    <Upload type='button' multiple on:change={(e) => console.log('file change', e.detail)} />
 </div>

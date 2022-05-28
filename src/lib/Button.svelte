@@ -1,7 +1,7 @@
 <script lang="ts">
     export let circle = false;
     export let outline = false;
-    export let type = "default";
+    export let type: 'default' | 'primary' | 'black' = 'default';
 </script>
 
 <button
