@@ -27,32 +27,9 @@
     const onBlur = (e) => {
         console.log(e.detail, " blured");
     }
-
-    $: {
-        console.log(radioGroup)
-    }
-    $: {
-        console.log(checkboxGroup)
-    }
 </script>
 <div class="input-page">
-    <h2>Select</h2>
-    <Select
-        on:change={onChange}
-        id="first-select"
-        options={[{name: '1', value: '1'}, {name: 'two', value: '2'},{name: 'third', value: '3'}]} 
-    />
-    <Select
-        defaultValue={["3"]}
-        id="second-select"
-        multiple
-        options={[{name: '1', value: '1'}, {name: 'two', value: '2'},{name: 'third', value: '3'}]}
-    />
-    <Select
-        defaultValue={["2"]}
-        id="third-select"
-        options={[{name: '1', value: '1'}, {name: 'two', value: '2'},{name: 'third', value: '3', disabled: true}]}
-    />
+    
     <h2>Input</h2>
     <h3>Input [type="text"]</h3>
     <Input placeholder="Input value" bind:value={textInputValue} on:input={onInput} on:blur={onBlur} />

@@ -9,7 +9,16 @@
 </script>
 
 <label class="label" class:block>
-    <input type="radio" bind:group={group} {id} {name} on:change on:input {checked} {value} />
+    <input
+        type="radio"
+        bind:group={group}
+        {id}
+        {name}
+        on:change
+        on:input
+        {checked}
+        {value}
+    />
     { label ? label : '' }
 </label>
 

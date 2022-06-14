@@ -1,13 +1,17 @@
 <script lang="ts">
     export let circle = false;
     export let outline = false;
+    export let text = false
     export let type: 'default' | 'primary' | 'black' = 'default';
+    export let nomargin = false
 </script>
 
 <button
     class={"button button-"+ type }
     class:circle
     class:outline
+    class:text
+    class:nomargin
     on:click
 >
     <slot />
@@ -15,8 +19,8 @@
 
 <style>
     .button {
-        margin: 20px;
-        padding: 7px 10px;
+        margin: 10px;
+        padding: 5px 7px;
         border-radius: 3px;
         border: 1px solid #cacaca;
         display: inline-flex;
@@ -29,13 +33,17 @@
         height: 75px;
         border-radius: 50%;
     }
+
+    .button.outline {
+        background-color: transparent;
+    }
+
     .button-default {
         color: #454545;
         border: 1px solid #cacaca;
         background-color: #fafafa;;
     }
     .button-default.outline {
-        background-color: transparent;
         border: 1px solid #cacaca;
     }
     .button-primary {
@@ -44,7 +52,6 @@
 		color: #fff;
     }
     .button-primary.outline {
-        background-color: transparent;
         color: #1674E0;
         border: 1px solid #1674E0;
     }
@@ -54,8 +61,26 @@
 		color: #fff;
     }
     .button-black.outline {
-        background-color: transparent;
         color: #000;
         border: 1px solid #000;
     }
+
+    .button.text {
+        background: transparent;
+        border: none;
+        color: #666;
+    }
+
+    .button.text:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .button-primary.text {
+        color: #1674E0;
+    }
+
+    .button.nomargin {
+        margin: 0 3px;
+    }
+
 </style>

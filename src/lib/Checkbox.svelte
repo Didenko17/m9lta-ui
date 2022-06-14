@@ -35,7 +35,7 @@ import { createEventDispatcher } from "svelte";
         margin-top: 20px;
         font-size: 14px;
         color: #353535;
-        font-weight: 5  00;
+        font-weight: 500;
         display: inline-flex;
         margin-right: 10px;
         align-items: center;

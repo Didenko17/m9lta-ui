@@ -1,7 +1,7 @@
 <script lang="ts">
     import { getMenuTypeFromContext } from "./hooks/getMenuTypeFromContext";
     import { getThemeFromContext } from "./hooks/getThemeFromContext";
-    import {activeMenu} from "./stores/activeMenu.js"    
+    import { activeMenu } from "./stores/activeMenu.js"    
     
     function setActive () {
         $activeMenu = name;
@@ -12,9 +12,15 @@
 
     const menuType = getMenuTypeFromContext();
     const theme = getThemeFromContext();
+
 </script>
+
 <a href={to} class="menu-item-link">
-    <div class="{ 'menu-item menu-item-' + menuType + ' ' + theme}" class:active={name === $activeMenu} on:click={setActive} >		
+    <div 
+        class="{ 'menu-item menu-item-' + menuType + ' ' + theme}"
+        class:active={name === $activeMenu}
+        on:click={setActive}
+    >		
             <slot/>
     </div>
 </a>
@@ -55,7 +61,7 @@
         border-right: 3px solid #05203f;
     }
     .menu-item-aside.default.active {
-        border-right: 3px solid #1674E0;
+        border-right: 3px solid rgb(10, 102, 56) ;
     }
     .menu-item-aside.light.active {
         border-right: 3px solid #cacaca;
@@ -66,7 +72,10 @@
     .menu-item-header.light.active {
         background-color: rgba(202, 202, 202, 0.4);
     }
-    .menu-item-header:hover{
+    .menu-item-header.default:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    .menu-item-header.dark:hover {
         color: #cacaca;
     }
     .menu-item-header.light:hover {

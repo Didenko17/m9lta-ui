@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { setContext } from "svelte"
-	export let theme = "default";
+	export let theme: "default" | "light" | "dark" = "default";
 
 	setContext("m9lta-ui-theme", {
 		theme,
@@ -17,6 +17,6 @@
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
-		align-items: center;
+		align-items: flex-start;
 	}
 </style>

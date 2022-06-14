@@ -1,22 +1,36 @@
-<script>
+<script lang="ts">
+
     import { getMenuTypeFromContext } from "./hooks/getMenuTypeFromContext";
     import { getThemeFromContext } from "./hooks/getThemeFromContext";
     import subMenuArrowDown from "./icons/submenu-arrow-down.svg";
     import subMenuArrowTop from "./icons/submenu-arrow-top.svg";
+    
     export let name = "Submenu";
+    
     let isOpen = false;
+    
     const menuType = getMenuTypeFromContext();
     const theme = getThemeFromContext();
+    
     const toggleOpen = function () {
         isOpen = !isOpen
     }
-    console.log(menuType);
+
 </script>
-<div class="{ 'submenu submenu-' + menuType + ' ' + theme }" on:mouseenter={menuType === 'header' ? toggleOpen : null} on:mouseleave={menuType === 'header' ? toggleOpen : null}>
+
+<div 
+    class="{ 'submenu submenu-' + menuType + ' ' + theme }"
+    on:mouseenter={menuType === 'header' ? toggleOpen : null}
+    on:mouseleave={menuType === 'header' ? toggleOpen : null}
+>
     <div class="submenu-name" on:click={toggleOpen}>
         { name }
         {#if menuType === 'aside'}
-            <img class="arrow" alt={isOpen? "Close" : "Open" } src={ isOpen? subMenuArrowTop : subMenuArrowDown } />
+            <img
+                class="arrow"
+                alt={isOpen? "Close" : "Open" }
+                src={ isOpen? subMenuArrowTop : subMenuArrowDown }
+            />
         {/if}
     </div>
     {#if isOpen}
@@ -76,12 +90,6 @@
         color: #454545;
     }
     .submenu-header.default .submenu-content :global(.menu-item){
-        color: #1674E0;
+        color: #454545;
     }
-
-    /* 
-        
-
-#cacaca
-    */
 </style>

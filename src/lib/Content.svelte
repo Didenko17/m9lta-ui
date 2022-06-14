@@ -1,10 +1,6 @@
-<script lang="ts">
-</script>
-
 <div class="content">
     <slot/>
 </div>
-    
 
 <style>
 	.content{
@@ -12,8 +8,9 @@
 		height: 88vh;
 		width: 90%;
 		background-color: #fff;
-		color: #353535;
+		color: #454545;
         padding: 20px;
-		overflow: auto;
+		overflow-y: auto;
 	}
 </style>
+

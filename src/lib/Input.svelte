@@ -8,11 +8,11 @@
 
     export let type: 'text' | 'number' | 'email' | 'password'  = 'text'
     export let label = ''
-    export let labelType = 'top'
+    export let labelType: 'top' | 'left' = 'top'
     export let placeholder = ''
     export let value: string | number = ''
-    export let name = null;
-    export let id = null;
+    export let name: string = null;
+    export let id: string = null;
 
     let passwordInput;
     let icon = passwordShowIcon;
@@ -36,11 +36,27 @@
 
 {#if type === 'number'}
     <label class={"label-" + labelType}> { label ? label + ':' : '' }
-        <input type="number" {id} {name} {placeholder} on:input bind:value={ value } on:blur />
+        <input
+            type="number"
+            {id}
+            {name}
+            {placeholder}
+            on:input
+            bind:value={ value }
+            on:blur
+        />
     </label>
 {:else if type === 'email'}
     <label class={"label-" + labelType}> { label ? label + ':' : '' }
-        <input type="email" {id} {name} {placeholder} on:input bind:value={ value } on:blur />
+        <input
+            type="email"
+            {id}
+            {name}
+            {placeholder}
+            on:input
+            bind:value={ value }
+            on:blur
+        />
     </label>
 {:else if type === 'password'} 
     <label 
@@ -63,7 +79,14 @@
     </label>
 {:else}
     <label class={"label-" + labelType}> { label ? label + ':' : '' }
-        <input {id} {name} {placeholder} on:input bind:value={ value } on:blur />
+        <input
+            {id}
+            {name}
+            {placeholder}
+            on:input
+            bind:value={ value }
+            on:blur
+        />
     </label>
 {/if}
 

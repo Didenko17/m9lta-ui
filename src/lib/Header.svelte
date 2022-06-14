@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getThemeFromContext } from "./hooks/getThemeFromContext";
-	export let flex: string = "center";
-	export let theme: string = "";
+	export let flex: "flex-start" | "center" | "space-between" = "center";
+	export let theme: "dark" | "default" | "light" = null;
 	let themeClass = getThemeFromContext(theme)
 </script>
 
@@ -12,7 +12,7 @@
 <style>
 	header{
 		height: 6vh;
-		width: 100vw;
+		width: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -28,7 +28,7 @@
 		justify-content: flex-start;
 	}
 	.default {
-		background-color: #1674E0;
+		background: linear-gradient(180deg, rgb(17, 11, 1) 0%, rgb(10, 102, 56) 100%);
 		color: #fff;
 	}
 	.dark {

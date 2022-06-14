@@ -1,18 +1,26 @@
-<script context="module">
-    export const key = 'id' + (new Date()).getTime();
+<script lang="ts" context="module">
+    export interface OptionType {
+        name:string, 
+        value:string, 
+        disabled?: boolean,
+    }
 </script>
 
 <script lang="ts">
+
     import arrowDown from "./icons/select-arrow-down.svg";
     import activeArrowDown from "./icons/select-arrow-down-active.svg";
     import arrowTop from "./icons/select-arrow-top.svg";
     import Option from "./Option.svelte";
     import { createEventDispatcher, onMount } from "svelte";
+
+    
+
     export let id = "";
     export let multiple: boolean = false;
     export let placeholder = "Select value";
     export let defaultValue: string[] = [];
-    export let options: {name:string, value:string, disabled?: boolean}[] = [];
+    export let options: OptionType[] = [];
 
     let isOpen = false;
     let arrow = arrowDown;
@@ -35,10 +43,9 @@
             arrow = activeArrowDown;
         }
     }
-    const onSelect = (option) => {
+    const onSelect = (option: OptionType) => {
         if (multiple) {
             if (selectedOptions.includes(option.value)) {
-                console.log(option.value)
                 selectedOptions = selectedOptions.filter((val) => val !== option.value)
                 selectedNames = selectedNames.filter((val) => val !== option.name)
             } else {

@@ -1,7 +1,7 @@
 <script lang="ts">
-import { getThemeFromContext } from "./hooks/getThemeFromContext";
-	export let theme = "";
-	export let flex = "center";
+	import { getThemeFromContext } from "./hooks/getThemeFromContext";
+	export let theme: "dark" | "default" | "light" = null;
+	export let flex: "flex-start" | "center" | "space-between" = "center";
 	const themeClass = getThemeFromContext(theme);
 </script>
 
@@ -12,15 +12,14 @@ import { getThemeFromContext } from "./hooks/getThemeFromContext";
 <style>
 	footer{
 		min-height: 6vh;
+		padding: 0px 50px;
         width: 100%;
-		background-color: #1674E0;
 		display: flex;
-		justify-content: center;
 		align-items: center;
 		color: #fff;
 	}
 	.default {
-		background-color: #1674E0;
+		background: linear-gradient(180deg, rgb(1, 43, 22) 0%, rgb(17, 11, 1) 100%);
 		color: #fff;
 	}
 	.dark {
@@ -31,6 +30,9 @@ import { getThemeFromContext } from "./hooks/getThemeFromContext";
 		background-color: #fafafa;
 		border-top: 1px solid #cacaca;
 		color: #454545;
+	}
+	.center {
+		justify-content: center;
 	}
 	.space-between {
 		justify-content: space-between;

@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
-
 <aside>
 	<nav class="aside">
 		<slot/>
@@ -9,13 +6,14 @@
 
 <style>
     aside{
-        min-height:88vh;
-        width:calc(10% - 1px);
+        height:88vh;
+        width:10%;
         background-color: #fff;
+        box-sizing: border-box;
         border-right: 1px solid #cacaca;
+        overflow-y: scroll;
     }
 	nav{
-		height: 100%;
 		width: 100%;
 		display: flex;
         flex-direction: column;

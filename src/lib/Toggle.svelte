@@ -9,6 +9,7 @@
     }
 
 </script>
+
 <div class="toggle-wrapper">
     <div class="off-text" class:active={!value}>
         {offText}
