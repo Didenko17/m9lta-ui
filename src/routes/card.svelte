@@ -1,7 +1,7 @@
 <script lang="ts">
     import Card from "$lib/Card.svelte";
     import dogImg from "../img/dog.jpg";
-    import PropsTable from "../components/propsTable.svelte";
+    import PropsTable from "$lib/docs/propsTable.svelte";
     import type { PropsTableRow } from "src/types/PropsTableRow";
     import snippet from "../snippets/card"
 import Code from "$lib/Code.svelte";

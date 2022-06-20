@@ -1,6 +1,6 @@
 <script lang="ts">
 import Avatar from "$lib/Avatar.svelte";
-import PropsTable from "../components/propsTable.svelte";
+import PropsTable from "$lib/docs/propsTable.svelte";
 import type { PropsTableRow } from "src/types/PropsTableRow";
 import avatar from '../img/avatar.jpg'
 import snippet from '../snippets/avatar';

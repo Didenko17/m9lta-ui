@@ -1,11 +1,11 @@
 <script lang="ts">
     import Checkbox from "$lib/Checkbox.svelte";
-    import PropsTable from "../components/propsTable.svelte";
-    import EventsTable from "../components/EventsTable.svelte";
+    import PropsTable from "$lib/docs/propsTable.svelte";
+    import EventsTable from "$lib/docs/EventsTable.svelte";
     import type { PropsTableRow } from "../types/PropsTableRow";
     import type { EventsTableRow } from "../types/EventsTableRow";
     import snippet from "../snippets/checkbox";
-import Code from "$lib/Code.svelte";
+    import Code from "$lib/Code.svelte";
 
     const props: PropsTableRow[] = [
         {

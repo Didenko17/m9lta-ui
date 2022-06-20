@@ -1,7 +1,7 @@
 <script lang="ts">
     import Input from "$lib/Input.svelte"
-    import PropsTable from "../components/propsTable.svelte";
-    import EventsTable from "../components/eventsTable.svelte";
+    import PropsTable from "$lib/docs/propsTable.svelte";
+    import EventsTable from "../lib/docs/EventsTable.svelte";
     import type { PropsTableRow } from "src/types/PropsTableRow";
     import type { EventsTableRow } from "src/types/EventsTableRow";
     import Code from "$lib/Code.svelte";

@@ -1,6 +1,6 @@
 <script lang="ts">
     import Empty from "$lib/Empty.svelte";
-    import PropsTable from "../components/propsTable.svelte";
+    import PropsTable from "$lib/docs/propsTable.svelte";
     import type { PropsTableRow } from "src/types/PropsTableRow";
     import snippet from "../snippets/empty"
     import Code from "$lib/Code.svelte";

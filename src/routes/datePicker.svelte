@@ -1,7 +1,7 @@
 <script lang="ts">
     import DatePicker from "$lib/DatePicker.svelte";
-    import EventsTable from "../components/EventsTable.svelte";
-    import PropsTable from "../components/propsTable.svelte";
+    import EventsTable from "$lib/docs/EventsTable.svelte";
+    import PropsTable from "$lib/docs/propsTable.svelte";
     import type { PropsTableRow } from "../types/PropsTableRow";
     import type { EventsTableRow } from "../types/EventsTableRow";
     import snippet from "../snippets/datepicker";

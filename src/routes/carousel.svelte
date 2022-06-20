@@ -3,7 +3,7 @@
     import catPhoto from "../img/carousel-photos/cat.jpg";
     import dogPhoto from "../img/carousel-photos/dog.jpg";
     import cowPhoto from "../img/carousel-photos/cow.jpg";
-    import PropsTable from "../components/propsTable.svelte";
+    import PropsTable from "$lib/docs/propsTable.svelte";
     import type { PropsTableRow } from "src/types/PropsTableRow";
     import Row from "$lib/Row.svelte";
     import Col from "$lib/Col.svelte";

@@ -1,7 +1,7 @@
 <script lang="ts">
     import RadioInput from "$lib/RadioInput.svelte";
-    import PropsTable from "../components/propsTable.svelte";
-    import EventsTable from "../components/eventsTable.svelte";
+    import PropsTable from "$lib/docs/propsTable.svelte";
+    import EventsTable from "../lib/docs/EventsTable.svelte";
     import type { PropsTableRow } from "../types/PropsTableRow";
     import type { EventsTableRow } from "../types/EventsTableRow";
     import snippet from "../snippets/radio"

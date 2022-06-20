@@ -1,7 +1,7 @@
 <script lang="ts">
     import TabPage, { Tab } from "$lib/TabPage.svelte";
     import Tabs from "$lib/Tabs.svelte";
-    import PropsTable from "../components/propsTable.svelte";
+    import PropsTable from "$lib/docs/propsTable.svelte";
     import type { PropsTableRow } from "src/types/PropsTableRow";
     import snippet from "../snippets/tab"
 import Code from "$lib/Code.svelte";

@@ -1,7 +1,7 @@
 <script lang="ts">
     import Code from "$lib/Code.svelte";
     import Header from "$lib/Header.svelte";
-    import PropsTable from "../components/PropsTable.svelte";
+    import PropsTable from "$lib/docs/PropsTable.svelte";
     import type { PropsTableRow } from "src/types/PropsTableRow";
     import snippet from '../snippets/header';
     

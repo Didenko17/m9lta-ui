@@ -5,7 +5,7 @@
     import avatar from '../img/avatar.jpg';
     import Avatar from "$lib/Avatar.svelte";
     import type { PropsTableRow } from "src/types/PropsTableRow";
-    import PropsTable from "../components/propsTable.svelte";
+    import PropsTable from "$lib/docs/propsTable.svelte";
     import snippet from "../snippets/table"
 import Code from "$lib/Code.svelte";
 

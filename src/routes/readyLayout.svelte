@@ -5,7 +5,7 @@
     import Footer from "$lib/Footer.svelte";
     import Header from "$lib/Header.svelte";
     import MLayout from "$lib/MLayout.svelte";
-    import PropsTable from "../components/propsTable.svelte";
+    import PropsTable from "$lib/docs/propsTable.svelte";
     import snippet from "../snippets/layout";
 
 const props = [

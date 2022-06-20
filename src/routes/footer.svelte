@@ -1,9 +1,9 @@
 <script lang="ts">
     import Code from "$lib/Code.svelte";
     import Footer from "$lib/Footer.svelte";
-    import PropsTable from "../components/PropsTable.svelte";
+    import PropsTable from "$lib/docs/PropsTable.svelte";
     import type { PropsTableRow } from "src/types/PropsTableRow";
-    import Example from "../components/Example.svelte";
+    import Example from "$lib/docs/Example.svelte";
     import snippet from "../snippets/footer"
     const props: PropsTableRow[] = [
         {
