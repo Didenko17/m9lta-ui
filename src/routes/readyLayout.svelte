@@ -1,8 +1,7 @@
 <script lang="ts">
     import Code from "$lib/Code.svelte";
-    import PropsTable from "$lib/docs/propsTable.svelte";
     import snippet from "../snippets/layout";
-
+    import PropsTable from "$lib/docs/propsTable.svelte";
 const props = [
     {
         props: "theme",
