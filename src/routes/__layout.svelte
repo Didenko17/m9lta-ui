@@ -125,6 +125,3 @@
 		</div>
 	</Footer>
 </MLayout>
-
-<style>
-</style>

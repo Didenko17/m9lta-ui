@@ -27,13 +27,3 @@ const props = [
     <h2>Component API</h2>
     <PropsTable data={props} />
 </div>
-
-<style>
-    .example {
-        width: 320px;
-        height: 240px;
-        margin: 10px;
-        border: 1px solid #cacaca;
-        overflow-y: auto;
-    }
-</style>
