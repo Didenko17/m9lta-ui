@@ -1,6 +1,6 @@
 <script lang="ts">
     import Code from "$lib/Code.svelte";
-    import PropsTable from "$lib/docs/propsTable.svelte";
+    import PropsTable from "$lib/docs/PropsTable.svelte";
     import snippet from "../snippets/layout";
 const props = [
     {
