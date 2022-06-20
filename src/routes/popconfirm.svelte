@@ -1,26 +1,10 @@
 <script lang='ts'>
-import Button from "$lib/Button.svelte";
-import PopConfirm from "$lib/PopConfirm.svelte";
-import Table, {Column} from "$lib/Table.svelte";
-
-
-    const columnsProps: Column[] = [
-        {
-            name: "Props",
-            key: "props",
-            dataKey: "props",
-        },
-        {
-            name: "Type",
-            key: "type",
-            dataKey: "type",
-        },
-        {
-            name: "Defaut value",
-            key: "default",
-            dataKey: "default",
-        }
-    ]
+    import Button from "$lib/Button.svelte";
+    import Code from "$lib/Code.svelte";
+    import PopConfirm from "$lib/PopConfirm.svelte";
+    import Table, {Column} from "$lib/Table.svelte";
+    import PropsTable from "../components/propsTable.svelte";
+    import snippet from "../snippets/popconfirm";
 
     const columnsEvents: Column[] = [
         {
@@ -75,7 +59,8 @@ import Table, {Column} from "$lib/Table.svelte";
     >
         <Button>Delete</Button>
     </PopConfirm>
+    <Code>{snippet.default}</Code>
     <h2>Component API</h2>
-    <Table columns={columnsProps} data={props} />
-    <Table columns={columnsEvents} data={events} />
+    <PropsTable data={props} />
+    <Table columns={columnsEvents} data={events} /> 
 </div>

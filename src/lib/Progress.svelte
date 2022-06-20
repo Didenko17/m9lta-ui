@@ -21,14 +21,14 @@
     height: 9px;
     margin: 10px;
     background-color: #fafafa;
-    border: 1px solid #cacaca;
+    border: 1px solid #efefef;
     overflow: hidden;
     border-radius: 4px;
 }
 
 .progress-value {
     height: 10px;
-    background-color: #1674E0;
+    background-color: #83bdff;
     max-width: 100%;
 }
 </style>

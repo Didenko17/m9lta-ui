@@ -1,10 +1,5 @@
-<script lang="ts">
-    import Row from "$lib/Row.svelte";
-    import Col from "$lib/Col.svelte";
-</script>
-
-<div class="column-page">
-    <h1>Row/Column</h1>
+export default {
+    default: `
     <Row>
         <Col width={4}>
             <div class="col">
@@ -46,16 +41,5 @@
             </div>
         </Col>
     </Row>
-</div>
-
-<style>
-.col {
-    background-color: #fafafa;
-    border: #cacaca;
-    height: 200px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    `
 }
-</style>

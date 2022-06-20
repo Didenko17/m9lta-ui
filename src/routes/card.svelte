@@ -1,40 +1,52 @@
 <script lang="ts">
     import Card from "$lib/Card.svelte";
     import dogImg from "../img/dog.jpg";
+    import PropsTable from "../components/propsTable.svelte";
+    import type { PropsTableRow } from "src/types/PropsTableRow";
+    import snippet from "../snippets/card"
+import Code from "$lib/Code.svelte";
 
-    const onClick = () => {
-        console.log('Card clicked')
-    } 
+    const props:PropsTableRow[] = [
+        {
+            props: "size",
+            type: "'small'| 'default' | 'large' | 'responsive'",
+            default: "'default'",
+        },
+        {
+            props: "backgroundImage",
+            type: "string",
+            default: "''",
+        }
+    ]
 
 </script>
 
 <div class="card-page">
-    <h2>Card</h2>
-    <h3>Card default usage</h3>
-    <Card on:click={onClick}>
+    <h1>Card</h1>
+    <h2>Card default usage</h2>
+    <p>Use Card to display some content as a card.</p>
+    <Card>
         Some text
     </Card>
-    <h3>Card sizing</h3>
-    <Card on:click={onClick} size='small'>
+    <Code>{snippet.default}</Code>
+    <h2>Responsive card</h2>
+    <p>Use props size='responsive' to make it responsive.</p>
+    <Card size='responsive'>
         Some text
     </Card>
-    <Card on:click={onClick}>
-        Some text
-    </Card>
-    <Card on:click={onClick} size='large'>
-        Some text
-    </Card>
-    <Card on:click={onClick} size='responsive'>
-        Some text Some text Some text Some text Some text
-    </Card>
-    <h3>Card background-image</h3>
-    <Card on:click={onClick} size='small' backgroundImage={dogImg}>
+    <Code>{snippet.responsive}</Code>
+    <h2>Card background-image</h2>
+    <p>Use props backgroundImage if you want to set a image as the background.</p>
+    <Card size='small' backgroundImage={dogImg}>
         Photo by kira schwarz
     </Card>
-    <Card on:click={onClick} backgroundImage={dogImg}>
+    <Card backgroundImage={dogImg}>
         Photo by kira schwarz
     </Card>
-    <Card on:click={onClick} size='large' backgroundImage={dogImg}>
+    <Card size='large' backgroundImage={dogImg}>
         Photo by kira schwarz
     </Card>
+    <Code>{snippet.backgroundImage}</Code>
+    <h2>Component API</h2>
+    <PropsTable data={props} />
 </div>

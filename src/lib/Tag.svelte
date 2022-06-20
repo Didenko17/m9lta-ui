@@ -30,7 +30,7 @@ import { createEventDispatcher } from "svelte";
 .tag {
     display: inline-flex;
     padding: 3px 5px;
-    margin: 10px;
+    margin: 10px 5px;
     justify-content: space-between;
     align-items: center;
     border-width: 1px;

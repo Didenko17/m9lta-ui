@@ -1,8 +1,10 @@
-<script lang="ts">
-    interface Tab {
+<script lang="ts" context="module">
+    export type Tab = {
         name: string,
         key: string,
     }
+</script>
+<script lang="ts">
     export let key: string = ''
     export let current: Tab = null
 </script>

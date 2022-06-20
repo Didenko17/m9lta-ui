@@ -3,7 +3,11 @@
     export let backgroundImage = ''
 </script>
 
-<div on:click class={ 'card ' + size } style:background={ backgroundImage ? `center / cover no-repeat url(${backgroundImage})` : '' } >
+<div 
+    on:click 
+    class={ 'card ' + size } 
+    style:background={ backgroundImage ? `center / cover no-repeat url(${backgroundImage})` : '' } 
+>
     <div class="description">
         <slot />
     </div>
@@ -11,6 +15,7 @@
 
 <style>
 .card {
+    display: inline-flex;
     margin: 10px;
     box-sizing: border-box;
     border: 1px solid #cacaca;

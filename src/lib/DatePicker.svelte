@@ -201,7 +201,7 @@
     <div class="show-calendar">
         <img src={icon} alt="show calendar" on:click={() => toggleCalendar()}>
         {#if isOpen}
-            <div class="calendar">
+            <div class="calendar" on:mouseleave={() => isOpen = false}>
                 <div class="calendar-header">
                     <div class="calendar-month" on:click={onMonthClick}>
                         { monthes[currentMonth] }
@@ -332,8 +332,8 @@
         padding: 10px;
         font-size: 14px;
         font-weight: 500;
-        bottom: 100%;
-        left: 0;
+        left: 100%;
+        top: 0;
         border: 1px solid #cacaca;
         background-color: #fafafa;
     }

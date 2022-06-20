@@ -1,14 +1,26 @@
 <script lang="ts">
-    export let width: Number = 0;
+    export let width: number = null;
+
+    let el;
+
+    $: {
+        if(el && !width) {
+            const colWidth = Math.ceil(el.clientWidth *12 / (el.parentNode.clientWidth - 20));
+            width = colWidth > 12 ? 12 : colWidth
+        }
+    }
+
 </script>
 
-<div class={ 'col col-' + width }>
+<div bind:this={el} class={ 'col col-' + width }>
     <slot></slot>
 </div>
 
 <style>
 .col {
     padding: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .col-1 {
     width: calc(100%/12);

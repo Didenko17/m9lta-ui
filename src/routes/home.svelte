@@ -1,37 +1,18 @@
 <script lang="ts">
-    import Row from "$lib/Row.svelte";
-    import Col from "$lib/Col.svelte";
-    import Input from "$lib/Input.svelte";
+import Code from "$lib/Code.svelte";
+
+    import Tag from "$lib/Tag.svelte";
+    import snippet from "../snippets/import";
+
 </script>
 <div class="home">
-    <Row>
-        <Col width={4}>
-            <Input label="Name" placeholder="Input your name"/>
-        </Col>
-        <Col width={4}>
-            <Input label="Last Name" />
-        </Col>
-        <Col width={4}>
-            <Input label="Birthday" type="date"/>
-        </Col>
-    </Row>
-    <Row>
-        <Col width={3}>
-            <Input label="Password" type="password" />
-        </Col>
-        <Col width={3}>
-            <Input label="Email" name="email" id="email" />
-        </Col>
-    </Row>
-    <Row>
-        <Col width={3}>
-            <Input label="Phone number" type="tel" />
-        </Col>
-        <Col width={6}>
-            <Input label="Upload" type="file"/>
-        </Col>
-        <Col>
-            <Input label="Number" type="number"/>
-        </Col>
-    </Row>
+    <h1>Getting started</h1>
+    <h2>m9lta-ui is a component library for Svelte. To start using it:</h2>
+    <h3>1) Create Svelte App</h3>
+    <h3>2) Read docs</h3>
+    <h3>3) Run <Tag>npm i m9lta-ui</Tag></h3>
+    <h3>4) Import component and use it</h3>
+    <h2>Component import</h2>
+    <p>To use a component, copy the code below and replace componentName with the name of the component you want to use.</p>
+    <Code>{snippet.default}</Code>
 </div>

@@ -1,9 +1,8 @@
+
 <script lang="ts">
 
-    interface Tab {
-        name: string,
-        key: string,
-    }
+    import type { Tab } from "./TabPage.svelte";
+
 
     export let width: string = '500px';
     export let height: string = '300px';

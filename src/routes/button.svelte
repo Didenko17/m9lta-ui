@@ -1,45 +1,12 @@
 <script lang="ts">
     import Button from "$lib/Button.svelte";
-    import Table, {Column} from "$lib/Table.svelte";
+    import Code from "$lib/Code.svelte";
+    import EventsTable from "../components/EventsTable.svelte";
+    import PropsTable from "../components/propsTable.svelte";
+    import snippet from "../snippets/button"
     function onClick (e) {
 		console.log('Button clicked');
 	}
-
-    const columnsProps: Column[] = [
-        {
-            name: "Props",
-            key: "props",
-            dataKey: "props",
-        },
-        {
-            name: "Type",
-            key: "type",
-            dataKey: "type",
-        },
-        {
-            name: "Defaut value",
-            key: "default",
-            dataKey: "default",
-        }
-    ]
-
-    const columnsEvents: Column[] = [
-        {
-            name: "Event",
-            key: "name",
-            dataKey: "name",
-        },
-        {
-            name: "Params",
-            key: "params",
-            dataKey: "params",
-        },
-        {
-            name: "Description",
-            key: "description",
-            dataKey: "description",
-        }
-    ] 
 
     const props= [
         {
@@ -81,15 +48,23 @@
 
 <div class="button-page">
     <h1>Button</h1>
-    <h2>Button</h2>
+    <h2>Default usage</h2>
     <Button on:click={(e) => onClick(e)} >Button</Button>
     <Button on:click={onClick} type="primary">Button</Button>
     <Button on:click={onClick} type="black">Button</Button>
-    <Button on:click={onClick} type="primary" outline circle>Button</Button>
+    <Code>{snippet.default}</Code>
+    <h2>Outline button</h2>
+    <Button on:click={onClick} type="primary" outline>Button</Button>
     <Button on:click={onClick} outline>Button</Button>
     <Button on:click={onClick} type="primary" outline>Button</Button>
-
+    <Code>{snippet.outline}</Code>
+    <h2>Circle button</h2>
+    <p>Use props circle to make Button rounded.</p>
+    <Button circle >Click</Button>
+    <Button circle type="primary" outline >Click</Button>
+    <Button circle type="black" >Click</Button>
+    <Code>{snippet.circle}</Code>
     <h2>Component API</h2>
-    <Table columns={columnsProps} data={props} />
-    <Table columns={columnsEvents} data={events} />
+    <PropsTable data={props} />
+    <EventsTable data={events} />
 </div>

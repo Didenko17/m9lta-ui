@@ -1,7 +1,7 @@
 <script lang="ts">
 
     export let images: string[] = []
-    export let width: number = 500;
+    export let width: number = 400;
     export let scale: '3x3' | '4x3' | '16x9' = '16x9'
 
     let height = 0;

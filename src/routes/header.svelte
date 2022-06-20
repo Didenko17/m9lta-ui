@@ -1,27 +1,11 @@
 <script lang="ts">
     import Code from "$lib/Code.svelte";
     import Header from "$lib/Header.svelte";
-    import Table, { Column } from "$lib/Table.svelte";
+    import PropsTable from "../components/PropsTable.svelte";
+    import type { PropsTableRow } from "src/types/PropsTableRow";
+    import snippet from '../snippets/header';
     
-    const columns: Column[] = [
-        {
-            name: "Props",
-            key: "props",
-            dataKey: "props",
-        },
-        {
-            name: "Type",
-            key: "type",
-            dataKey: "type",
-        },
-        {
-            name: "Defaut value",
-            key: "default",
-            dataKey: "default",
-        }
-    ]
-    
-    const data = [
+    const props: PropsTableRow[] = [
         {
             props: "theme",
             type: "'light' | 'default' | 'dark'",
@@ -37,23 +21,20 @@
     
     </script>
     <div class="header-page">
-        <h2>Header</h2>
+        <h1>Header</h1>
         <p>The Header can be used to display your application's logo, or for top navigation. It can also contain any other elements, such as a log out button. The header has the following props: flex, theme.</p>
         
-        <h3>Basic Usage</h3>
+        <h2>Basic Usage</h2>
     
         <div class="example">
             <Header>header</Header>
         </div>
         
         <Code>
-            &lt;MLayout&gt;
-                &lt;Header&gt;...
-                &lt;/Header&gt;
-            &lt;MLayout&gt;
+            {snippet.default}
         </Code>
 
-        <h3>Flex props</h3>
+        <h2>Flex props</h2>
     
         <div class="example">
             <Header flex="center">
@@ -78,30 +59,10 @@
         </div>
         
         <Code>
-            &lt;MLayout&gt;
-                &lt;Header&gt;
-                    &lt;div&gt;1&lt;/div&gt;
-                    &lt;div&gt;2&lt;/div&gt;
-                    &lt;div&gt;3&lt;/div&gt;
-                &lt;/Header&gt;
-            &lt;MLayout&gt;
-            &lt;MLayout&gt;
-                &lt;Header flex="space-between"&gt;
-                    &lt;div&gt;1&lt;/div&gt;
-                    &lt;div&gt;2&lt;/div&gt;
-                    &lt;div&gt;3&lt;/div&gt;
-                &lt;/Header&gt;
-            &lt;MLayout&gt;
-            &lt;MLayout&gt;
-                &lt;Header flex="flex-start"&gt;
-                    &lt;div&gt;1&lt;/div&gt;
-                    &lt;div&gt;2&lt;/div&gt;
-                    &lt;div&gt;3&lt;/div&gt;
-                &lt;/Header&gt;
-            &lt;MLayout&gt;
+            {snippet.flex}
         </Code>
 
-        <h3>Theme props</h3>
+        <h2>Theme props</h2>
     
         <div class="example">
             <Header theme="dark">
@@ -120,31 +81,11 @@
         </div>
         
         <Code>
-            &lt;MLayout&gt;
-                &lt;Header theme="dark"&gt;
-                    &lt;div&gt;1&lt;/div&gt;
-                    &lt;div&gt;2&lt;/div&gt;
-                    &lt;div&gt;3&lt;/div&gt;
-                &lt;/Header&gt;
-            &lt;MLayout&gt;
-            &lt;MLayout&gt;
-                &lt;Header&gt;
-                    &lt;div&gt;1&lt;/div&gt;
-                    &lt;div&gt;2&lt;/div&gt;
-                    &lt;div&gt;3&lt;/div&gt;
-                &lt;/Header&gt;
-            &lt;MLayout&gt;
-            &lt;MLayout&gt;
-                &lt;Header theme="light"&gt;
-                    &lt;div&gt;1&lt;/div&gt;
-                    &lt;div&gt;2&lt;/div&gt;
-                    &lt;div&gt;3&lt;/div&gt;
-                &lt;/Header&gt;
-            &lt;MLayout&gt;
+            {snippet.theme}
         </Code>
     
-        <h3>Component API</h3>
-        <Table {columns} {data} />
+        <h2>Component API</h2>
+        <PropsTable data={props} />
     
     </div>
     

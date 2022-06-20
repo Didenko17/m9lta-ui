@@ -46,10 +46,11 @@
             if (e.dataTransfer) {
                 const file = e.dataTransfer.files[0]
                 if ( types.includes(file.type) || types.includes(file.name.slice(file.name.indexOf('.')))) {
-                    console.log('accepted')
                     uploadedFiles = [ file ]
                 } else {
-                    console.log('type validation failed')
+                    dispatch('error', {
+                        text: 'Type validation failed.'
+                    })
                 }
             }
         }

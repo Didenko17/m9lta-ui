@@ -44,7 +44,7 @@
         });
     }
 
-    const sortCol = (col: column ) => {
+    const sortCol = (col: Column ) => {
         if (sorts[col.dataKey]) {
             stateTable = [...data];
             sorts = { ...sorts, [col.dataKey] : false }
@@ -52,7 +52,6 @@
             stateTable = [...data].sort((a, b) => col.onSort ? col.onSort(a, b) : a[col.dataKey] < b[col.dataKey] ? -1 : 1 )
             sorts = { ...sorts, [col.dataKey] : true }
         }
-        console.log(sorts)
     }
 
 
@@ -128,6 +127,10 @@ tr, th, td {
 th {
     background-color: #eee;
     color: #666;
+}
+
+td {
+    overflow-wrap: break-word;
 }
 
 .header-cell, .header-cell-controls {

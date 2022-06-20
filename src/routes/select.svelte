@@ -1,6 +1,8 @@
 <script lang="ts">
-    import Select from "$lib/Select.svelte";
+    import Code from "$lib/Code.svelte";
+import Select from "$lib/Select.svelte";
     import Table, {Column} from "$lib/Table.svelte";
+    import snippet from "../snippets/select"
 
 
     const columnsProps: Column[] = [
@@ -89,6 +91,7 @@
         id="first-select"
         options={[{name: '1', value: '1'}, {name: 'two', value: '2'},{name: 'third', value: '3'}]} 
     />
+    <Code>{snippet.default}</Code>
     <h2>Select multiple</h2>
     <p>Use props multiple to select multiple values.</p>
     <Select
@@ -97,6 +100,7 @@
         multiple
         options={[{name: '1', value: '1'}, {name: 'two', value: '2'},{name: 'third', value: '3'}]}
     />
+    <Code>{snippet.multiple}</Code>
     <h2>Select disabled</h2>
     <p>Use option field disabled to disable option.</p>
     <Select
@@ -104,6 +108,7 @@
         id="third-select"
         options={[{name: '1', value: '1'}, {name: 'two', value: '2'},{name: 'third', value: '3', disabled: true}]}
     />
+    <Code>{snippet.disabled}</Code>
     <h2>Component API</h2>
     <Table columns={columnsProps} data={props}/>
     <Table columns={columnsEvents} data={events}/>

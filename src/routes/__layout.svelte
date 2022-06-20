@@ -21,6 +21,9 @@
 			<MenuItem name="Home" to="/home">
 				Home
 			</MenuItem>
+			<MenuItem name="Menu 2" to="https://www.npmjs.com/package/m9lta-ui">
+				npm
+			</MenuItem>
 			<MenuItem name="Menu 2" to="https://github.com/Didenko17/m9lta-ui">
 				Github
 			</MenuItem>
@@ -41,7 +44,7 @@
 				<MenuItem name="Menu" to="/menu">
 					Menu
 				</MenuItem>
-				<MenuItem name="Column" to="/column">
+				<MenuItem name="Grid" to="/grid">
 					Row/Column
 				</MenuItem>
 			</SubMenu>
@@ -109,9 +112,6 @@
 				</MenuItem>
 				<MenuItem name="PopConfirm" to="/popconfirm">
 					PopConfirm
-				</MenuItem>
-				<MenuItem name="Range">
-					Range
 				</MenuItem>
 			</SubMenu>
 		</Menu>

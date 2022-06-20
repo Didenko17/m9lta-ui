@@ -1,10 +1,12 @@
 <script lang="ts">
-    import TabPage from "$lib/TabPage.svelte";
-import Tabs from "$lib/Tabs.svelte";
-</script>
+    import TabPage, { Tab } from "$lib/TabPage.svelte";
+    import Tabs from "$lib/Tabs.svelte";
+    import PropsTable from "../components/propsTable.svelte";
+    import type { PropsTableRow } from "src/types/PropsTableRow";
+    import snippet from "../snippets/tab"
+import Code from "$lib/Code.svelte";
 
-<div class="tabs-page">
-    <Tabs let:current tabs={[
+    const tabs: Tab[] = [
         {
             name: 'Tab 1',
             key: 'tab1'
@@ -17,7 +19,46 @@ import Tabs from "$lib/Tabs.svelte";
             name: 'Tab 3',
             key: 'tab3'
         },
-    ]}>
+    ]
+
+    const tabsProps: PropsTableRow[] = [
+        {
+            props: "width",
+            type: "string",
+            default: "500px",
+        },
+        {
+            props: "height",
+            type: "string",
+            default: "300px",
+        },
+        {
+            props: "tabs",
+            type: "Tab[ ]",
+            default: "[ ]",
+        },
+    ]
+
+    const tabPageProps: PropsTableRow[] = [
+        {
+            props: "key",
+            type: "string",
+            default: "''",
+        },
+        {
+            props: "current",
+            type: "Tab",
+            default: "null",
+        },
+    ]
+
+</script>
+
+<div class="tabs-page">
+    <h1>Tabs</h1>
+    <h2>Default usage</h2>
+    <p>Use props width and height to set the width and height of Tabs. You can use any string that CSS recognizes (px, %, vh, vw, etc.).</p>
+    <Tabs let:current {tabs}>
         <TabPage {current} key='tab1'>
             Tab 1
         </TabPage>
@@ -28,4 +69,10 @@ import Tabs from "$lib/Tabs.svelte";
             Tab 3
         </TabPage>
     </Tabs>
+    <Code>{snippet.default}</Code>
+    <h2>Tabs API</h2>
+    <PropsTable data={tabsProps} />
+    <PropsTable data={tabPageProps} />
+    <h2>Tab type</h2>
+    <Code nocopy>{snippet.tabType}</Code>
 </div>

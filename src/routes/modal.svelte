@@ -1,26 +1,10 @@
 <script lang="ts">
     import Button from "$lib/Button.svelte";
+    import Code from "$lib/Code.svelte";
     import Modal from "$lib/Modal.svelte";
     import Table, {Column} from "$lib/Table.svelte";
-
-
-    const columnsProps: Column[] = [
-        {
-            name: "Props",
-            key: "props",
-            dataKey: "props",
-        },
-        {
-            name: "Type",
-            key: "type",
-            dataKey: "type",
-        },
-        {
-            name: "Defaut value",
-            key: "default",
-            dataKey: "default",
-        }
-    ]
+    import PropsTable from "../components/propsTable.svelte";
+    import snippet from "../snippets/modal";
 
     const columnsEvents: Column[] = [
         {
@@ -72,11 +56,13 @@
     <h2>Modal default usage</h2>
     <p>Use this component to users interact with the application, without jumping to a new page and interrupting the user's workflow. You can use Modal to create a new floating layer over the current page to get user feedback or display information.</p>
     <Button on:click={showModal} >Show modal</Button>
+    <Code>{snippet.default}</Code>
     <h2>Modal with footer</h2>
     <p>Use named slot footer to display content in bottom part of modal.</p>
     <Button on:click={showFooterModal} >Show modal with footer</Button>
+    <Code>{snippet.footer}</Code>
     <h2>Component API</h2>
-    <Table columns={columnsProps} data={props} />
+    <PropsTable data={props} />
     <Table columns={columnsEvents} data={events} />
     {#if isDefaultModalVisible}
         <Modal name='Example modal' on:close={closeModal}>

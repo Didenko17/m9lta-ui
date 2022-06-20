@@ -1,31 +1,14 @@
 <script lang="ts">
-import Aside from "$lib/Aside.svelte";
-import Code from "$lib/Code.svelte";
-import Content from "$lib/Content.svelte";
-import Footer from "$lib/Footer.svelte";
-import Header from "$lib/Header.svelte";
-import MLayout from "$lib/MLayout.svelte";
-import Table, { Column } from "$lib/Table.svelte";
+    import Aside from "$lib/Aside.svelte";
+    import Code from "$lib/Code.svelte";
+    import Content from "$lib/Content.svelte";
+    import Footer from "$lib/Footer.svelte";
+    import Header from "$lib/Header.svelte";
+    import MLayout from "$lib/MLayout.svelte";
+    import PropsTable from "../components/propsTable.svelte";
+    import snippet from "../snippets/layout";
 
-const columns: Column[] = [
-    {
-        name: "Props",
-        key: "props",
-        dataKey: "props",
-    },
-    {
-        name: "Type",
-        key: "type",
-        dataKey: "type",
-    },
-    {
-        name: "Defaut value",
-        key: "default",
-        dataKey: "default",
-    }
-]
-
-const data = [
+const props = [
     {
         props: "theme",
         type: "'light' | 'default' | 'dark'",
@@ -36,36 +19,13 @@ const data = [
 
 </script>
 <div class="mlayout-page">
-    <h2>MLayout</h2>
+    <h1>MLayout</h1>
+    <h2>Basic Usage</h2>
     <p>The MLayout component must be the base of your application if you want to use components such as Header, Aside, Content, Footer. The MLayout component is responsible for their proper positioning.</p>
-    
-    <h3>Basic Usage</h3>
+    <Code>{snippet.default}</Code>
 
-    <div class="example">
-        <MLayout>
-            <Header />
-            <Aside />
-            <Content />
-            <Footer />
-        </MLayout>
-    </div>
-    
-    <Code>
-        &lt;MLayout&gt;
-            &lt;Header&gt;...
-            &lt;/Header&gt;
-            &lt;Aside&gt;...
-            &lt;/Aside&gt;
-            &lt;Content&gt;...
-            &lt;/Content&gt;
-            &lt;Footer&gt;...
-            &lt;/Footer&gt;
-        &lt;MLayout&gt;
-    </Code>
-
-    <h3>Component API</h3>
-    <Table {columns} {data} />
-
+    <h2>Component API</h2>
+    <PropsTable data={props} />
 </div>
 
 <style>

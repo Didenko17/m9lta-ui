@@ -10,7 +10,7 @@
     export let label = ''
     export let labelType: 'top' | 'left' = 'top'
     export let placeholder = ''
-    export let value: string | number = ''
+    export let value: string | number = null
     export let name: string = null;
     export let id: string = null;
 
@@ -30,6 +30,7 @@
 
     const onPasswordFocus = () => {
         icon = icon === passwordShowIcon? activePasswordShowIcon : activePasswordHideIcon
+        dispatch('focus')
     }
 
 </script>
@@ -61,7 +62,8 @@
 {:else if type === 'password'} 
     <label 
         class={"password label-" + labelType}
-    > { label ? label + ':' : '' }
+    >   
+        { label ? label + ':' : '' }
         <input
             type="password"
             {id}
