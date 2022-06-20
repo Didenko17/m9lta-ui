@@ -1,10 +1,5 @@
 <script lang="ts">
-    import Aside from "$lib/Aside.svelte";
     import Code from "$lib/Code.svelte";
-    import Content from "$lib/Content.svelte";
-    import Footer from "$lib/Footer.svelte";
-    import Header from "$lib/Header.svelte";
-    import MLayout from "$lib/MLayout.svelte";
     import PropsTable from "$lib/docs/propsTable.svelte";
     import snippet from "../snippets/layout";
 
