@@ -1,6 +1,6 @@
 <script lang="ts">
     import Statistic from "$lib/Statistic.svelte";
-    import PropsTable from "$lib/docs/propsTable.svelte";
+    import PropsTable from "$lib/docs/PropsTable.svelte";
     import type { PropsTableRow } from "src/types/PropsTableRow";
     import starIcon from '../img/star.svg';
     import snippet from "../snippets/statistic"

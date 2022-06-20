@@ -2,7 +2,7 @@
     import Button from "$lib/Button.svelte";
     import Code from "$lib/Code.svelte";
     import EventsTable from "$lib/docs/EventsTable.svelte";
-    import PropsTable from "$lib/docs/propsTable.svelte";
+    import PropsTable from "$lib/docs/PropsTable.svelte";
     import snippet from "../snippets/button"
     function onClick (e) {
 		console.log('Button clicked');

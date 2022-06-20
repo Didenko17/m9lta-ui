@@ -1,6 +1,6 @@
 <script lang="ts">
     import Checkbox from "$lib/Checkbox.svelte";
-    import PropsTable from "$lib/docs/propsTable.svelte";
+    import PropsTable from "$lib/docs/PropsTable.svelte";
     import EventsTable from "$lib/docs/EventsTable.svelte";
     import type { PropsTableRow } from "../types/PropsTableRow";
     import type { EventsTableRow } from "../types/EventsTableRow";

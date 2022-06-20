@@ -3,7 +3,7 @@
     import Menu from "$lib/Menu.svelte";
     import MenuItem from "$lib/MenuItem.svelte";
     import SubMenu from "$lib/SubMenu.svelte";
-    import PropsTable from "$lib/docs/propsTable.svelte";
+    import PropsTable from "$lib/docs/PropsTable.svelte";
     import type { PropsTableRow } from "src/types/PropsTableRow";
     import Code from "$lib/Code.svelte";
     import snippet from "../snippets/menu";

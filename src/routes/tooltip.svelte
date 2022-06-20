@@ -3,7 +3,7 @@
     import Row from "$lib/Row.svelte";
     import Tag from "$lib/Tag.svelte";
     import Tooltip from "$lib/Tooltip.svelte";
-    import PropsTable from "$lib/docs/propsTable.svelte";
+    import PropsTable from "$lib/docs/PropsTable.svelte";
     import type { PropsTableRow } from "src/types/PropsTableRow";
     import snippet from "../snippets/tooltip"
 import Code from "$lib/Code.svelte";

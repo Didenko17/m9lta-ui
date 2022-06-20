@@ -2,7 +2,7 @@
     import Row from "$lib/Row.svelte";
     import Col from "$lib/Col.svelte";
     import Example from "$lib/docs/Example.svelte";
-    import PropsTable from "$lib/docs/propsTable.svelte";
+    import PropsTable from "$lib/docs/PropsTable.svelte";
     import type { PropsTableRow } from "src/types/PropsTableRow";
     import snippet from "../snippets/grid"
 import Code from "$lib/Code.svelte";

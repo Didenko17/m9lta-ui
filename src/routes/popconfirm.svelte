@@ -3,7 +3,7 @@
     import Code from "$lib/Code.svelte";
     import PopConfirm from "$lib/PopConfirm.svelte";
     import Table, {Column} from "$lib/Table.svelte";
-    import PropsTable from "$lib/docs/propsTable.svelte";
+    import PropsTable from "$lib/docs/PropsTable.svelte";
     import snippet from "../snippets/popconfirm";
 
     const columnsEvents: Column[] = [

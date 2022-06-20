@@ -1,6 +1,6 @@
 <script lang="ts">
 import Progress from "$lib/Progress.svelte";
-import PropsTable from "$lib/docs/propsTable.svelte";
+import PropsTable from "$lib/docs/PropsTable.svelte";
 import type { PropsTableRow } from "src/types/PropsTableRow";
 import snippet from "../snippets/progress"
 import Code from "$lib/Code.svelte";

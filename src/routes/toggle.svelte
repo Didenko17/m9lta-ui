@@ -2,7 +2,7 @@
     import Code from "$lib/Code.svelte";
 import Toggle from "$lib/Toggle.svelte";
     import type { PropsTableRow } from "src/types/PropsTableRow";
-    import PropsTable from "$lib/docs/propsTable.svelte";
+    import PropsTable from "$lib/docs/PropsTable.svelte";
     import snippet from "../snippets/toggle";
 
     let toggle1 = true;
